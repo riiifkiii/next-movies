@@ -39,8 +39,13 @@ export default function SearchBar() {
 							return;
 						}
 						if (e.key == "Enter") {
-							route.replace(`http://localhost:3000/?query=${e.target.value}`);
+							// route.replace(`http://localhost:3000/?query=${e.target.value}`);
 							// route.push(`?query=${e.target.value}`);
+							//
+							//for vercel
+							route.replace(
+								`https://next-movies-iota-opal.vercel.app/?query=${e.target.value}`,
+							);
 						}
 					}}
 					onChange={(e) => {
